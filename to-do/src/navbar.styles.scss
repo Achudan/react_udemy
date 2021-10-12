@@ -1,0 +1,43 @@
+.navbar {
+    // display:block;
+    // width: 60px;
+    background-color: rgb(211, 197, 197);
+    list-style-type: none;
+    overflow: hidden;
+    // padding: 14px 16px;
+}
+.nav_elements{
+    display:inline;
+}
+[class^=menu-items] {
+    color: rgb(28, 1, 65);    
+    // width: 60px;
+    text-align: center;
+    border-right: 1px solid #bbb;
+    float: left;
+    padding: 14px 16px;
+    
+
+    &[class$=right-child]{
+        float: right;
+        border-left: 1px solid #bbb;
+        border-right: none;
+    }
+
+    &:hover{
+        background-color: green;
+        color: white;
+    }
+}
+
+.profile-user-img{
+    border-radius: 50%;
+    width: 20px;
+    
+}
+
+.profile>[class^='profile']{
+    display:inline;
+    padding-right: 5px;
+    // clear:both;
+}
