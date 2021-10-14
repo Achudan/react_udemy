@@ -1,43 +1,86 @@
 .navbar {
-    // display:block;
     // width: 60px;
     background-color: rgb(211, 197, 197);
-    list-style-type: none;
-    overflow: hidden;
-    // padding: 14px 16px;
+    // overflow: hidden;
+    display: flow-root;
+    // z-index: 1;
 }
-.nav_elements{
-    display:inline;
-}
-[class^=menu-items] {
-    color: rgb(28, 1, 65);    
-    // width: 60px;
-    text-align: center;
-    border-right: 1px solid #bbb;
-    float: left;
-    padding: 14px 16px;
-    
-
-    &[class$=right-child]{
-        float: right;
-        border-left: 1px solid #bbb;
-        border-right: none;
-    }
-
+[class^='nav_elements']{
+    display:inline-flex;
+    // position:relative;
+    // z-index: 2;
     &:hover{
         background-color: green;
         color: white;
     }
 }
 
-.profile-user-img{
-    border-radius: 50%;
-    width: 20px;
-    
+.nav_elements-has-sub{
+    position: relative;
+    // background-color: rgb(99, 97, 97);
 }
 
-.profile>[class^='profile']{
-    display:inline;
-    padding-right: 5px;
-    // clear:both;
+.menu-items{
+    padding: 14px 16px;
+    // &:hover{
+    //     background-color: green;
+    //     color: white;
+    // }
+}
+.container-left{
+    float:left;
+    display:inline-flex;
+    direction: row;
+}
+.container-right{
+    float:right;
+    display:inline-flex;
+    direction: row;
+}
+
+// [class^=menu-items],.container-right {
+[class^=menu-items] {
+    color: rgb(28, 1, 65);
+    border-right: 1px solid rgb(0, 0, 0);
+    &[class$=right-child]{
+        border-left: 0.5px solid rgb(99, 0, 0);
+        border-right: none;
+    }
+}
+
+.profile-user-img{
+    border-radius: 50%;
+    width: 15px;
+    margin-right: 10px;
+}
+
+[class^='profile-']{
+    display:inline-block;
+    vertical-align: middle;
+}
+
+
+.container-focused{
+    background: rgb(131, 170, 255);
+    width: auto;
+    float: none;
+    position: absolute;
+    top: 35px;
+    list-style: none;
+    align-items: center;
+    cursor: pointer;
+    padding: 0px 0px 0px 0px;
+    min-width: 100px;
+    display:flex;
+    flex-direction: column;
+    visibility: visible;
+
+    // overflow: hidden;
+    z-index: 2;
+
+    li{
+        padding:5px;
+        text-align: center;
+        float: none;
+    }
 }

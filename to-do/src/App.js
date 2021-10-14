@@ -17,7 +17,6 @@ function App() {
       <LoginButton />
       <Navbar />
       <LogoutButton />
-      <Profile />
     </div>
     )
   );
